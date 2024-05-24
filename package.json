@@ -1,0 +1,34 @@
+{
+  "name": "food-delivery",
+  "version": "1.0.0",
+  "description": "clone of swiggy food develiery website",
+  "source": "public/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malla-lokesh/food-delivery.git"
+  },
+  "keywords": [
+    "swiggy",
+    "production-ready-code",
+    "swiggy-api"
+  ],
+  "author": "lokesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malla-lokesh/food-delivery/issues"
+  },
+  "homepage": "https://github.com/malla-lokesh/food-delivery#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
