@@ -1,0 +1,33 @@
+header {
+  height: 8vh;
+  position: sticky;
+  align-content: center;
+  top: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-content: center;
+  list-style: none;
+}
+
+li {
+  color: #3d4152;
+}
+
+li:hover {
+  color: #fc8019;
+  cursor: pointer;
+}
+
+nav > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,5 +1,12 @@
+import React from "react";
+import Header from "./components/Header/Header";
+
 const App = () => {
-  return <h1>Happy Coding!</h1>;
+  return (
+    <React.Fragment>
+      <Header />
+    </React.Fragment>
+  );
 };
 
 export default App;
