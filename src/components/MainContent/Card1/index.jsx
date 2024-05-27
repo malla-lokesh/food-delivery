@@ -1,7 +1,6 @@
 import React from "react";
 import { BANNER_CDN_URL } from "../../../utils/constants";
 import "./styles.css";
-import "../../common/styles/styles.css";
 
 const TopChoices = (props) => {
   const { title, imgGridCards } = props;

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import TopChoices from "./TopChoices";
+import Card1 from "./Card1";
+import Card2 from "./Card2";
 import "./content.css";
 
 const Content = () => {
   const [choices, setChoices] = useState({});
+  const [topRestaurants, setTopRestaurants] = useState({});
 
   useEffect(() => {
     fetchData();
@@ -21,13 +23,21 @@ const Content = () => {
 
     const response = await data.json();
     setChoices(response?.data?.cards[0]?.card?.card);
+    setTopRestaurants(response?.data?.cards[1]?.card?.card);
   };
 
   return (
     <div className="main-content">
-      <TopChoices
+      <Card1
         title={choices?.header?.title}
         imgGridCards={choices?.imageGridCards?.info}
+      />
+      <hr />
+      <Card2
+        title={topRestaurants?.header?.title}
+        topRestaurants={
+          topRestaurants?.gridElements?.infoWithStyle?.restaurants
+        }
       />
       <hr />
     </div>

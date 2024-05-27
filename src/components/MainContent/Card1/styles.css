@@ -45,6 +45,6 @@
 }
 
 /* for safari */
-::-webkit-scrollbar {
+.banner-grid::-webkit-scrollbar {
   display: none;
 }

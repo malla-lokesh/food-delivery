@@ -1,0 +1,85 @@
+.topRestaurants-title-loading {
+  height: 24px;
+  width: 275px;
+  margin: 2rem 0;
+  background-color: lightgray;
+  animation: loading 1s linear infinite alternate;
+}
+
+.topRestaurants-title {
+  font-size: 24px;
+  margin: 2rem 0;
+  font-weight: 800;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.top-restaurants-grid,
+.top-restaurants-grid-loading {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  column-gap: 3rem;
+  overflow-x: scroll;
+}
+
+.top-restaurant-card {
+  height: 300px;
+  width: 273px;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+.topRestaurant-img-loading {
+  height: 182px;
+  width: 273px;
+  border-radius: 1rem;
+  background-color: lightgray;
+  animation: loading 1s linear infinite alternate;
+}
+
+.top-restaurant-card:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.top-restaurant-card > img {
+  height: 182px;
+  width: 273px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.top-restaurant-details {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.top-restaurant-name {
+  font-size: 18px;
+  color: rgba(2, 6, 12, 0.92);
+  font-weight: 700;
+}
+
+.top-restaurant-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.top-restaurant-avgRating {
+  margin-left: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(2, 6, 12, 0.75);
+}
+
+.top-restaurant-areaName,
+.top-restaurant-cuisines {
+  font-weight: 200;
+  font-size: 16px;
+  color: rgba(2, 6, 12, 0.6);
+}
+
+.top-restaurants-grid::-webkit-scrollbar {
+  display: none;
+}
