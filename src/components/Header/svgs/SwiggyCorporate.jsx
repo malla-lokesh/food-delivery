@@ -1,4 +1,4 @@
-export default SwiggyCorporate = () => {
+const SwiggyCorporate = () => {
   return (
     <svg
       className="_1GTCc"
@@ -27,3 +27,5 @@ export default SwiggyCorporate = () => {
     </svg>
   );
 };
+
+export default SwiggyCorporate;

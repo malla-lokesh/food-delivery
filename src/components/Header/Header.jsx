@@ -1,4 +1,4 @@
-import Logo from "./svgs/Logo";
+import CompanyLogo from "./svgs/CompanyLogo";
 import SwiggyCorporate from "./svgs/SwiggyCorporate";
 import Search from "./svgs/Search";
 import Offers from "./svgs/Offers";
@@ -12,7 +12,7 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <Logo />
+          <CompanyLogo />
           <li className="nav-list-item">Other</li>
           <li className="nav-list-item">
             <SwiggyCorporate /> Swiggy Corporate
