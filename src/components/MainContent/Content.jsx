@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import Card1 from "./Card1";
-import Card2 from "./Card2";
+import TopChoices from "./TopChoices";
+import TopRestaurants from "./TopRestaurants";
 import "./content.css";
 import Card3 from "./Card3";
+import Restaurants from "./Restaurants";
 
 const Content = () => {
   const [choices, setChoices] = useState({});
   const [topRestaurants, setTopRestaurants] = useState({});
   const [popularRestaurantsTitle, setPopularRestaurantsTitle] = useState("");
+  const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -27,16 +29,20 @@ const Content = () => {
     setChoices(response?.data?.cards[0]?.card?.card);
     setTopRestaurants(response?.data?.cards[1]?.card?.card);
     setPopularRestaurantsTitle(response?.data?.cards[2]?.card?.card);
+    setRestaurants(
+      response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
   };
 
   return (
     <div className="main-content">
-      <Card1
+      <TopChoices
         title={choices?.header?.title}
         imgGridCards={choices?.imageGridCards?.info}
       />
       <hr />
-      <Card2
+      <TopRestaurants
         title={topRestaurants?.header?.title}
         topRestaurants={
           topRestaurants?.gridElements?.infoWithStyle?.restaurants
@@ -44,6 +50,7 @@ const Content = () => {
       />
       <hr />
       <Card3 title={popularRestaurantsTitle?.title} />
+      <Restaurants restaurants={restaurants} />
     </div>
   );
 };
