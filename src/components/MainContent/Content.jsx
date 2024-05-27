@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
 import "./content.css";
+import Card3 from "./Card3";
 
 const Content = () => {
   const [choices, setChoices] = useState({});
   const [topRestaurants, setTopRestaurants] = useState({});
+  const [popularRestaurantsTitle, setPopularRestaurantsTitle] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -24,6 +26,7 @@ const Content = () => {
     const response = await data.json();
     setChoices(response?.data?.cards[0]?.card?.card);
     setTopRestaurants(response?.data?.cards[1]?.card?.card);
+    setPopularRestaurantsTitle(response?.data?.cards[2]?.card?.card);
   };
 
   return (
@@ -40,6 +43,7 @@ const Content = () => {
         }
       />
       <hr />
+      <Card3 title={popularRestaurantsTitle?.title} />
     </div>
   );
 };
