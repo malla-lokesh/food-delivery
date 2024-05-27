@@ -1,4 +1,4 @@
-export default CompanyLogo = () => {
+export default Logo = () => {
   return (
     <svg
       className="_8pSp-"
