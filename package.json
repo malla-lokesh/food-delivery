@@ -2,10 +2,9 @@
   "name": "food-delivery",
   "version": "1.0.0",
   "description": "clone of swiggy food develiery website",
-  "source": "public/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html",
     "test": "jest"
   },
   "repository": {
@@ -25,7 +24,8 @@
   "homepage": "https://github.com/malla-lokesh/food-delivery#readme",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "parcel": "^2.12.0",
