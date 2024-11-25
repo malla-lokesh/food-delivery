@@ -12,8 +12,11 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <CompanyLogo />
-          <li className="nav-list-item">Other</li>
+          <div className="logo-section">
+            <CompanyLogo />
+            <li className="nav-list-item">Other</li>
+          </div>
+          <div className="navLinks-section">
           <li className="nav-list-item">
             <SwiggyCorporate /> Swiggy Corporate
           </li>
@@ -37,6 +40,7 @@ const Header = () => {
             <Cart />
             Cart
           </li>
+          </div>
         </ul>
       </nav>
     </header>

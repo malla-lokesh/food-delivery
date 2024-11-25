@@ -34,7 +34,7 @@ const Restaurants = (props) => {
               <div className="top-restaurant-rating">
                 <Rating />
                 <div className="top-restaurant-avgRating">
-                  {avgRatingString}
+                  <span className="top-restaurant-onlyRating">{avgRatingString}</span>
                   &#xb7;
                   {deliveryTime}
                 </div>
